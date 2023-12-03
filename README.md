@@ -38,11 +38,11 @@
 Не забываем сохранить изменения.
 
 7. Идем в .pro файл нашего проекта и добавляем  в #CONFIG += resources_big. Должно получиться следующее:
-
-   CONFIG += \
-    auroraapp \
-    resources_big
-
+<code>
+   CONFIG += \ <br>
+    auroraapp \ <br>
+    resources_big <br>
+</code>
 ВНИМАНИЕ! 
 Без этой директивы в случае большого веб-проекта на несколько десятков мегабайт сборка выдаст ошибку "virtul memory exhauted", "qrc_resources.o Error 1"
 
