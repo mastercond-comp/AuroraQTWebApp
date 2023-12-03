@@ -75,7 +75,7 @@ INSTALLS += www <br>
     allowedOrientations: Orientation.All <br>
     _defaultPageOrientations: Orientation.All
 </code>
-<br><br>
+<br><img src="https://github.com/mastercond-comp/AuroraQTWebApp/blob/main/step9.png?raw=true"><br>
 10. Перходим к MainPage.qml. Для работы WebView при условии нахождения index.html в папке www будет работоспособным следующий код:
 <br><br>
 <pre><code>
