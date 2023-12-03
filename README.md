@@ -14,17 +14,17 @@
 6. Правой кнопкой мыши по нашему файлу ресурсов resources.qrc -> Открыть в редакторе -> Где префикс - там ставим /, добавляем префикс. Теперь правой кнопкой мыши по resources.qrc -> Открыть с помощью -> Текстовый редактор.<br><br>
    <pre>
       <code>
-   <RCC>
-   <qresource prefix="/">
+   &lt;RCC&gt;
+   &lt;qresource prefix="/"&gt;
     //Сюда вставлем то, что скопировали в пункте 5. Добавляем <file> перед названием файла и </file> после названия файла, при большом количестве файлов пользуемся функцией Найти и заменить (Ctrl-F)//<br>
-    </qresource>
-</RCC>
+   &lt;/qresource&gt;
+&lt;/RCC&gt;
 </code></pre><br><br>
 
 Должно получиться в итоге примерно следующее:<br><br>
 <pre><code>
-<RCC>
-    <qresource prefix="/">
+&lt;RCC&gt;
+   &lt;qresource prefix="/"&gt;
     ...
         <file>www/blockly/accessible/app.component.js</file>
         <file>www/blockly/accessible/clipboard.service.js</file>
@@ -35,8 +35,8 @@
         <file>www/blockly/accessible/libs/es6-shim.min.js</file>
         <file>www/blockly/accessible/messages.js</file>
     ...
-   </qresource>
-</RCC>
+ &lt;/qresource&gt;
+&lt;/RCC&gt;
 </code></pre><br><br>
 
 Не забываем сохранить изменения в файлах.<br><br>
