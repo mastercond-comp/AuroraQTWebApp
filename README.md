@@ -5,12 +5,12 @@
 Приложение, работающее без веб-сервера, построенное на базе html+js. <br>Руководство для версии Аврора IDE 4.0.2.249 (актуальность - декабрь 2023 года).<br><br>
 
 <strong>Шаги:</strong><br><br>
-1. Создаем новое приложение, заполняем все необходимые поля диалога создания нового Qt QML-приложения<br><img src="https://github.com/mastercond-comp/AuroraQTWebApp/blob/main/step1.png?raw=true"><br><br>
-2. Весь веб-контент (html,js,контент) кладем в папку www в директории приложения (например, для Linux это будет /home/имя_пользователя/AuroraApps/имя_приложения)<br><img src="https://github.com/mastercond-comp/AuroraQTWebApp/blob/main/step2.png?raw=true"><br><br>
-3. Правой кнопкой мыши по имени проекта, в меню выбираем "Добавить новый", в окне выбираем Qt -> Файл ресурсов Qt.<br><img src="https://github.com/mastercond-comp/AuroraQTWebApp/blob/main/step3.png?raw=true"><br><br>
-Нажимаем "Выбрать", в следующем диалоге пишем в имени файла resources и в следующем диалоге "Завершить".<br><img src="https://github.com/mastercond-comp/AuroraQTWebApp/blob/main/step3-1.png?raw=true"><br><br> В проекте будет создан файл ресурсов resources.qrc, который будет прописан в .pro файле нашего приложения (будет внизу .pro файла строка RESOURCES += resources.qrc)<br><img src="https://github.com/mastercond-comp/AuroraQTWebApp/blob/main/step3-2.png?raw=true"><br>
+1. Создаем новое приложение, заполняем все необходимые поля диалога создания нового Qt QML-приложения<br><br><img src="https://github.com/mastercond-comp/AuroraQTWebApp/blob/main/step1.png?raw=true"><br><br>
+2. Весь веб-контент (html,js,контент) кладем в папку www в директории приложения (например, для Linux это будет /home/имя_пользователя/AuroraApps/имя_приложения)<br><br><img src="https://github.com/mastercond-comp/AuroraQTWebApp/blob/main/step2.png?raw=true"><br><br>
+3. Правой кнопкой мыши по имени проекта, в меню выбираем "Добавить новый", в окне выбираем Qt -> Файл ресурсов Qt.<br><br><img src="https://github.com/mastercond-comp/AuroraQTWebApp/blob/main/step3.png?raw=true"><br><br>
+Нажимаем "Выбрать", в следующем диалоге пишем в имени файла resources и в следующем диалоге "Завершить".<br><br><img src="https://github.com/mastercond-comp/AuroraQTWebApp/blob/main/step3-1.png?raw=true"><br><br> В проекте будет создан файл ресурсов resources.qrc, который будет прописан в .pro файле нашего приложения (будет внизу .pro файла строка RESOURCES += resources.qrc)<br><br><img src="https://github.com/mastercond-comp/AuroraQTWebApp/blob/main/step3-2.png?raw=true"><br>
 4. Добавлем в проект приложения нашу папку www: правой кнопкой по названию проекта -> "Добавить существующий каталог", далее выбираем наш каталог www.<br><br>
-5. Всё содержимое каталога www будет включено в .pro файл нашего проекта. Открываем .pro файл и видим список файлов в разделе DISTFILES += . Выбираем и копируем все оттуда, начинающееся с www (Ctrl-C).<br><img src="https://github.com/mastercond-comp/AuroraQTWebApp/blob/main/step5.png?raw=true"><br><br>
+5. Всё содержимое каталога www будет включено в .pro файл нашего проекта. Открываем .pro файл и видим список файлов в разделе DISTFILES += . Выбираем и копируем все оттуда, начинающееся с www (Ctrl-C).<br><br><img src="https://github.com/mastercond-comp/AuroraQTWebApp/blob/main/step5.png?raw=true"><br><br>
 6. Правой кнопкой мыши по нашему файлу ресурсов resources.qrc -> Открыть в редакторе -> Где префикс - там ставим /, добавляем префикс. Теперь правой кнопкой мыши по resources.qrc -> Открыть с помощью -> Текстовый редактор.<br><br>
    
    &lt;RCC&gt;<br>
@@ -36,7 +36,7 @@
     ...
  &lt;/qresource&gt;
 &lt;/RCC&gt;
-</code></pre><br><img src="https://github.com/mastercond-comp/AuroraQTWebApp/blob/main/step6.png?raw=true"><br><br>
+</code></pre><br><br><img src="https://github.com/mastercond-comp/AuroraQTWebApp/blob/main/step6.png?raw=true"><br><br>
 
 Не забываем сохранить изменения в файлах.<br><br>
 
@@ -50,7 +50,7 @@
 
 <strong>ВНИМАНИЕ! 
 Без этой директивы в случае большого веб-проекта на несколько десятков мегабайт сборка выдаст ошибку "virtul memory exhauted", "qrc_resources.o Error 1"
-</strong><br><img src="https://github.com/mastercond-comp/AuroraQTWebApp/blob/main/step7.png?raw=true"><br><br>
+</strong><br><br><img src="https://github.com/mastercond-comp/AuroraQTWebApp/blob/main/step7.png?raw=true"><br><br>
 
 <pre><code>
 #ЗА ПОМОЩЬ С РЕШЕНИЕМ ПРОБЛЕМ С НЕХВАТКОЙ ПАМЯТИ ПРИ СБОРКЕ ОГРОМНОЕ СПАСИБО ДАНИИЛУ МИХАЙЛОВУ-ОВСЯННИКОВУ <br>
@@ -68,14 +68,14 @@ INSTALLS += www <br>
 
 #ВКЛЮЧЕНИЕ ПАПКИ www В RPM-файл, без этой секции ресурсы в RPM-файл включены не будут<br>
 #В РАБОТЕ ДЛЯ WEBVIEW В QML ТЕПЕРЬ МОЖНО ИСПОЛЬЗОВАТЬ ССЫЛКИ ТИПА url: "www/index.html" где index.html находится в папке www ресурсов</code></pre>
-<br><img src="https://github.com/mastercond-comp/AuroraQTWebApp/blob/main/step8.png?raw=true"><br><br>
+<br><br><img src="https://github.com/mastercond-comp/AuroraQTWebApp/blob/main/step8.png?raw=true"><br><br>
 <i>Физически на устростве (телефоне, планшете) папка www будет после установки приложения размещаться в папке /usr/share/имя_приложения/qml/pages</i><br><br>
 9. Переходим к файлу имя_проекта.qml. Выставляем ориентации (опционально)<br><br>
 <code>
     allowedOrientations: Orientation.All <br>
     _defaultPageOrientations: Orientation.All
 </code>
-<br><img src="https://github.com/mastercond-comp/AuroraQTWebApp/blob/main/step9.png?raw=true"><br><br>
+<br><br><img src="https://github.com/mastercond-comp/AuroraQTWebApp/blob/main/step9.png?raw=true"><br><br>
 10. Перходим к MainPage.qml. Для работы WebView при условии нахождения index.html в папке www будет работоспособным следующий код:
 <br><br>
 <pre><code>
@@ -102,4 +102,4 @@ Page {
 }
 </code></pre><br><br>
 
-11. В разделе "Проекты" не забываем указать ключи для подписи пакетов, собираем приложение.<br><img src="https://github.com/mastercond-comp/AuroraQTWebApp/blob/main/step10.png?raw=true"><br>
+11. В разделе "Проекты" не забываем указать ключи для подписи пакетов, собираем приложение.<br><br><img src="https://github.com/mastercond-comp/AuroraQTWebApp/blob/main/step10.png?raw=true"><br>
