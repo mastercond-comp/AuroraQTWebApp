@@ -68,7 +68,7 @@ INSTALLS += www <br>
 
 #ВКЛЮЧЕНИЕ ПАПКИ www В RPM-файл, без этой секции ресурсы в RPM-файл включены не будут<br>
 #В РАБОТЕ ДЛЯ WEBVIEW В QML ТЕПЕРЬ МОЖНО ИСПОЛЬЗОВАТЬ ССЫЛКИ ТИПА url: "www/index.html" где index.html находится в папке www ресурсов</code></pre>
-<br><br>
+<br><img src="https://github.com/mastercond-comp/AuroraQTWebApp/blob/main/step8.png?raw=true"><br>
 <i>Физически на устростве (телефоне, планшете) папка www будет после установки приложения размещаться в папке /usr/share/имя_приложения/qml/pages</i><br><br>
 9. Переходим к файлу имя_проекта.qml. Выставляем ориентации (опционально)<br><br>
 <code>
