@@ -25,14 +25,14 @@
 &lt;RCC&gt;
    &lt;qresource prefix="/"&gt;
     ...
-        <file>www/blockly/accessible/app.component.js</file>
-        <file>www/blockly/accessible/clipboard.service.js</file>
-        <file>www/blockly/accessible/field.component.js</file>
-        <file>www/blockly/accessible/libs/Rx.umd.min.js</file>
-        <file>www/blockly/accessible/libs/angular2-all.umd.min.js</file>
-        <file>www/blockly/accessible/libs/angular2-polyfills.min.js</file>
-        <file>www/blockly/accessible/libs/es6-shim.min.js</file>
-        <file>www/blockly/accessible/messages.js</file>
+       &lt;file&gt;www/blockly/accessible/app.component.js&lt;/file&gt;
+       &lt;file&gt;www/blockly/accessible/clipboard.service.js&lt;/file&gt;
+       &lt;file&gt;www/blockly/accessible/field.component.js&lt;/file&gt;
+       &lt;file&gt;www/blockly/accessible/libs/Rx.umd.min.js&lt;/file&gt;
+       &lt;file&gt;www/blockly/accessible/libs/angular2-all.umd.min.js&lt;/file&gt;
+       &lt;file&gt;www/blockly/accessible/libs/angular2-polyfills.min.js&lt;/file&gt;
+       &lt;file&gt;www/blockly/accessible/libs/es6-shim.min.js&lt;/file&gt;
+       &lt;file&gt;www/blockly/accessible/messages.js&lt;/file&gt;
     ...
  &lt;/qresource&gt;
 &lt;/RCC&gt;
