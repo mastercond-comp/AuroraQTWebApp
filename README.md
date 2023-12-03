@@ -52,22 +52,22 @@
 Без этой директивы в случае большого веб-проекта на несколько десятков мегабайт сборка выдаст ошибку "virtul memory exhauted", "qrc_resources.o Error 1"
 </strong><br><br>
 
-<code>
+<pre><code>
 #ЗА ПОМОЩЬ С РЕШЕНИЕМ ПРОБЛЕМ С НЕХВАТКОЙ ПАМЯТИ ПРИ СБОРКЕ ОГРОМНОЕ СПАСИБО ДАНИИЛУ МИХАЙЛОВУ-ОВСЯННИКОВУ <br>
 #CONFIG += resources_big<br>
 #ПРИ ПОМОЩИ ЭТОЙ ДИРЕКТИВЫ ПРОЕКТ СОБИРАЕТСЯ БЕЗ ПРОБЛЕМ ДАЖЕ ПРИ РАЗМЕРЕ ПАПКИ WWW в 150 Мб<br>
-</code><br><br>
+</code></pre><br><br>
 
 8. Добавляем в конец нашего .pro файла следующий код:<br><br>
-<code>
+<pre><code>
 DEPLOYMENT_PATH = /usr/share/$${TARGET}/qml/pages <br>
 www.files =www <br>
 www.path = $${DEPLOYMENT_PATH} <br>
 INSTALLS += www <br>
-</code><br><br>
+<br><br>
 
-#ВКЛЮЧЕНИЕ ПАПКИ www В RPM-файл, без этой секции ресурсы в RPM-файл включены не будут
-#В РАБОТЕ ДЛЯ WEBVIEW В QML ТЕПЕРЬ МОЖНО ИСПОЛЬЗОВАТЬ ССЫЛКИ ТИПА url: "www/index.html" где index.html находится в папке www ресурсов
+#ВКЛЮЧЕНИЕ ПАПКИ www В RPM-файл, без этой секции ресурсы в RPM-файл включены не будут<br>
+#В РАБОТЕ ДЛЯ WEBVIEW В QML ТЕПЕРЬ МОЖНО ИСПОЛЬЗОВАТЬ ССЫЛКИ ТИПА url: "www/index.html" где index.html находится в папке www ресурсов</code></pre>
 <br><br>
 9. Переходим к файлу имя_проекта.qml. Выставляем ориентации (опционально)<br><br>
 <code>
