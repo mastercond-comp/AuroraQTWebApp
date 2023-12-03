@@ -36,7 +36,7 @@
     ...
  &lt;/qresource&gt;
 &lt;/RCC&gt;
-</code></pre><br><br>
+</code></pre><br><img src="https://github.com/mastercond-comp/AuroraQTWebApp/blob/main/step6.png?raw=true"><br>
 
 Не забываем сохранить изменения в файлах.<br><br>
 
