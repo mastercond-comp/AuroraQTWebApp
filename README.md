@@ -52,16 +52,16 @@
 
 8. Добавляем в конец нашего .pro файла следующий код:
    
-DEPLOYMENT_PATH = /usr/share/$${TARGET}/qml/pages
-www.files =www
-www.path = $${DEPLOYMENT_PATH}
-INSTALLS += www
+DEPLOYMENT_PATH = /usr/share/$${TARGET}/qml/pages <br>
+www.files =www <br>
+www.path = $${DEPLOYMENT_PATH} <br>
+INSTALLS += www <br>
 
 #ВКЛЮЧЕНИЕ ПАПКИ www В RPM-файл, без этой секции ресурсы в RPM-файл включены не будут
 #В РАБОТЕ ДЛЯ WEBVIEW В QML ТЕПЕРЬ МОЖНО ИСПОЛЬЗОВАТЬ ССЫЛКИ ТИПА url: "www/index.html" где index.html находится в папке www ресурсов
 
 9. Переходим к файлу имя_проекта.qml. Выставляем ориентации (опционально)
-    allowedOrientations: Orientation.All
+    allowedOrientations: Orientation.All <br>
     _defaultPageOrientations: Orientation.All
 
 10. Перходим к MainPage.qml. Для работы WebView при условии нахождения index.html в папке www будет работоспособным следующи код:
