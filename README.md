@@ -48,8 +48,10 @@
     resources_big <br>
 </code>
 
-ВНИМАНИЕ! 
+<strong>ВНИМАНИЕ! 
 Без этой директивы в случае большого веб-проекта на несколько десятков мегабайт сборка выдаст ошибку "virtul memory exhauted", "qrc_resources.o Error 1"
+</strong>
+
 <code>
 #ЗА ПОМОЩЬ С РЕШЕНИЕМ ПРОБЛЕМ С НЕХВАТКОЙ ПАМЯТИ ПРИ СБОРКЕ ОГРОМНОЕ СПАСИБО ДАНИИЛУ МИХАЙЛОВУ-ОВСЯННИКОВУ
 #CONFIG += resources_big
@@ -68,11 +70,14 @@ INSTALLS += www <br>
 #В РАБОТЕ ДЛЯ WEBVIEW В QML ТЕПЕРЬ МОЖНО ИСПОЛЬЗОВАТЬ ССЫЛКИ ТИПА url: "www/index.html" где index.html находится в папке www ресурсов
 
 9. Переходим к файлу имя_проекта.qml. Выставляем ориентации (опционально)
+<code>
     allowedOrientations: Orientation.All <br>
     _defaultPageOrientations: Orientation.All
+</code>
 
-10. Перходим к MainPage.qml. Для работы WebView при условии нахождения index.html в папке www будет работоспособным следующи код:
+11. Перходим к MainPage.qml. Для работы WebView при условии нахождения index.html в папке www будет работоспособным следующи код:
 
+<code>
 import QtQuick 2.6
 import QtWebKit 3.0
 import Sailfish.Silica 1.0
@@ -97,5 +102,6 @@ Page {
                 webView.url = Qt.resolvedUrl("www/index.html")
             }
 }
+</code>
 
 11. В разделе "Проекты" не забываем указать ключи для подписи пакетов, собираем приложение.
