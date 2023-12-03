@@ -12,17 +12,17 @@
 4. Добавлем в проект приложения нашу папку www: правой кнопкой по названию проекта -> "Добавить существующий каталог", далее выбираем наш каталог www.<br><br>
 5. Всё содержимое каталога www будет включено в .pro файл нашего проекта. Открываем .pro файл и видим список файлов в разделе DISTFILES += . Выбираем и копируем все оттуда, начинающееся с www (Ctrl-C).<br><br>
 6. Правой кнопкой мыши по нашему файлу ресурсов resources.qrc -> Открыть в редакторе -> Где префикс ставим /, добавляем префикс. Теперь правой кнопкой мыши по resources.qrc -> Открыть с помощью -> Текстовый редактор.<br><br>
-  <code> 
+   <pre><code> 
   <RCC>
     <qresource prefix="/">
     //Сюда вставлем то, что скопировали в пункте 5. Добавляем <file> перед названием файла и </file> после названия файла, при большом количестве файлов пользуемся функцией Найти и заменить (Ctrl-F)//
     </qresource>
 </RCC>
-</code><br><br>
+</code><pre><br><br>
 
 Должно получиться в итоге примерно следующее:<br><br>
-<code>
-"<RCC>
+<pre><code>
+<RCC>
     <qresource prefix="/">
     ...
         <file>www/blockly/accessible/app.component.js</file>
@@ -35,8 +35,8 @@
         <file>www/blockly/accessible/messages.js</file>
     ...
         </qresource>
-</RCC>"
-</code><br><br>
+</RCC>
+</code></pre><br><br>
 
 Не забываем сохранить изменения.
 
@@ -77,7 +77,7 @@ INSTALLS += www <br>
 <br><br>
 10. Перходим к MainPage.qml. Для работы WebView при условии нахождения index.html в папке www будет работоспособным следующи код:
 <br><br>
-<code>
+<pre><code>
 import QtQuick 2.6
 import QtWebKit 3.0
 import Sailfish.Silica 1.0
@@ -99,6 +99,6 @@ Page {
                 webView.url = Qt.resolvedUrl("www/index.html")
             }
 }
-</code><br><br>
+</code></pre><br><br>
 
 11. В разделе "Проекты" не забываем указать ключи для подписи пакетов, собираем приложение.
