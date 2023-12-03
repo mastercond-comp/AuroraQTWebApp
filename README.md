@@ -50,7 +50,7 @@
 
 <strong>ВНИМАНИЕ! 
 Без этой директивы в случае большого веб-проекта на несколько десятков мегабайт сборка выдаст ошибку "virtul memory exhauted", "qrc_resources.o Error 1"
-</strong><br><br>
+</strong><br><img src="https://github.com/mastercond-comp/AuroraQTWebApp/blob/main/step7.png?raw=true"><br>
 
 <pre><code>
 #ЗА ПОМОЩЬ С РЕШЕНИЕМ ПРОБЛЕМ С НЕХВАТКОЙ ПАМЯТИ ПРИ СБОРКЕ ОГРОМНОЕ СПАСИБО ДАНИИЛУ МИХАЙЛОВУ-ОВСЯННИКОВУ <br>
