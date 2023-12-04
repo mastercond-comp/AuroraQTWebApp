@@ -101,4 +101,5 @@ Page {
 }
 </code></pre><br><br>
 
-11. В разделе "Проекты" не забываем указать ключи для подписи пакетов, собираем приложение.<br><br><img src="https://github.com/mastercond-comp/AuroraQTWebApp/blob/main/step10.png?raw=true"><br>
+11. В разделе "Проекты" не забываем указать ключи для подписи пакетов, собираем приложение.<br><br><img src="https://github.com/mastercond-comp/AuroraQTWebApp/blob/main/step10.png?raw=true"><br><br>
+12. При необходимости можем использовать имеющиеся в приложении компоненты, которые мы разместили в папке www, для комбинированного web/qml приложения
